@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+.controls-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100vh; 
+    border-bottom: 1px solid #ccc;
+    background-color: #e0e0e0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+#coloroptions {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    }
+
+#coloroptions button{
+    border-radius: 40px;
+    border: solid 1px black;
+    background: black;
+    color: white;
+    }
+
+.gradient-editor > div,
+.size-options > div {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.gradient-editor > div input[type="color"] {
+    margin-left: 5px;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+.size-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.harmony-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.harmony-buttons > button {
+    margin-bottom: 5px;
+    border-radius: 50px;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.action-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-buttons > button {
+    margin-bottom: 5px;
+    border-radius: 50px;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    margin-left: 5px;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+}
+
+canvas {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    border: solid 0.5px black;
+}
+
+.composition-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.composition-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.composition-buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .controls-panel {
+        width: 25vw;
+        border-bottom: none;
+        border-right: 1px solid #ccc;
+    }
+}

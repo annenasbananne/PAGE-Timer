@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls-panel">
+            <div class="gradient-editor section">
+                <h2>Colors</h2>
+                <div>
+                    <label for="color1">Color 1: </label>
+                    <input type="color" id="color1" value="#ff0000">
+                </div>
+                <hr>
+                <div>
+                    <label for="color2">Color 2: </label>
+                    <input type="color" id="color2" value="#00ff00">
+                </div>
+                <hr>
+                <div>
+                    <label for="color3">Color 3: </label>
+                    <input type="color" id="color3" value="#0000ff">
+                </div>
+                <hr>
+                <div>
+                    <label for="color5">Color 5: </label>
+                    <input type="color" id="color5" value="#ff00ff">
+                </div>
+                  
+                <div id="coloroptions">
+                <button id="saveColorsBtn">Save Colors</button>
+                <button id="loadColorsBtn">Load Colors</button>
+                    </div>
+                <input type="file" id="loadColorsInput" style="display:none;">
+            </div>
+            <hr>
+        
+            <hr>
+            <div class="size-options section">
+                <h2>Canvas Size</h2>
+                <label for="canvasSize">Canvas Size: </label>
+                <select id="canvasSize">
+                    <option value="1350x1350">1350 x 1350</option>
+                    <option value="1920x1080">1920 x 1080</option>
+                    <option value="1350x1080">1350 x 1080</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <div id="customSize" style="display: none;">
+                    <label for="customWidth">Width: </label>
+                    <input type="number" id="customWidth" min="1">
+                    <label for="customHeight">Height: </label>
+                    <input type="number" id="customHeight" min="1">
+                    <button id="setCustomSizeBtn">Set Size</button>
+                </div>
+            </div>
+            <hr>
+            <div class="composition-buttons section">
+                <h2>Composition</h2>
+                <div class="composition-row">
+                    <button id="swooshBtn">
+                        <div class="thumbnail" id="swooshThumbnail"></div>
+                        Swoosh
+                    </button>
+                    <button id="sunriseBtn">
+                        <div class="thumbnail" id="sunriseThumbnail"></div>
+                        Sunrise
+                    </button>
+                    <button id="moveBtn">
+                        <div class="thumbnail" id="moveThumbnail"></div>
+                        Move
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <div class="harmony-buttons">
+                <button id="randomBtn">Random Generate</button>
+            </div>
+            <hr>
+            <div class="action-buttons">
+                <button id="downloadBtn">Download</button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
